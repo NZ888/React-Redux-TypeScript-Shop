@@ -1,0 +1,83 @@
+.container{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.logoContainer, .userContainer, .searchContainer, .cardContainer{
+    width: 25%;
+}
+.userContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    gap: 8px;
+}
+
+.searchContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 7px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 12px 10px 36px;
+    border-radius: 12px;
+    border: none;
+    background-color: #191919;
+    color: #fff;
+    font-size: 14px;
+}
+
+.searchInput::placeholder {
+    color: #A0A0A0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cardDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.badge {
+    position: absolute;
+    top: 23px;
+    right: 3px;
+    background-color: #9b59b6;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #b8b8b8;
+}
+
