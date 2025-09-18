@@ -2,7 +2,6 @@
     margin-top: 10px;
     display: flex;
     align-items: center;
-    max-width: 1220px;
 }
 .logoContainer, .userContainer, .searchContainer, .cardContainer{
     width: 25%;

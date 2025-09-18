@@ -1,0 +1,78 @@
+.promoContainer {
+    width: 80%;
+    height: 423px;
+    background: #191919;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    min-width: 945px;
+}
+
+
+.salePromoDiv {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 120px;
+    text-transform: uppercase;
+    color: #212123;
+    z-index: 0;
+}
+
+.promoContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    top: 117px;
+}
+
+.promoDescriptionDiv p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #616e74;
+    margin-bottom: 8px;
+}
+
+.promoDescriptionDiv h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #f6f6f7;
+    margin-bottom: 12px;
+}
+
+.promoDescriptionDiv button {
+    border-radius: 6px;
+    width: 125px;
+    height: 38px;
+    background: #6c3eb8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.promoDescriptionDiv button:hover {
+    background: #5a32a0;
+}
+
+.promoImageDiv {
+    max-width: 40%;
+}
+
+.promoImageDiv img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

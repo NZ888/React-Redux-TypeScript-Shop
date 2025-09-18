@@ -1,117 +1,48 @@
 .container {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
+    min-height: 100vh;
+    align-items: flex-start;
 }
 
-.catContainer {
-    width: 19%;
-    height: 423px;
-    background: #191919;
-    border-radius: 6px;
-    padding: 20px;
+.topRow {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.catContainer h2 {
-    font-weight: 600;
-    font-size: 16px;
-    color: #fff;
-}
+/*Tranding*/
 
-.categoriesDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    max-width: 230px;
-}
-
-.categoriesDiv p {
-    font-weight: 500;
-    font-size: 14px;
-    color: #576067;
-    cursor: pointer;
-}
-
-
-.promoContainer {
-    width: 80%;
-    height: 423px;
-    background: #191919;
-    border-radius: 6px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    min-width: 945px;
-    max-width: 962px;
-}
-
-
-.salePromoDiv {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 120px;
-    text-transform: uppercase;
-    color: #212123;
-    z-index: 0;
-}
-
-.promoContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    top: 117px;
-}
-
-.promoDescriptionDiv p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #616e74;
-    margin-bottom: 8px;
-}
-
-.promoDescriptionDiv h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    text-transform: uppercase;
-    color: #f6f6f7;
-    margin-bottom: 12px;
-}
-
-.promoDescriptionDiv button {
-    border-radius: 6px;
-    width: 125px;
-    height: 38px;
-    background: #6c3eb8;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.promoDescriptionDiv button:hover {
-    background: #5a32a0;
-}
-
-.promoImageDiv {
-    max-width: 40%;
-}
-
-.promoImageDiv img {
+.trendingContainer {
+    flex: 0 0 auto;
     width: 100%;
     height: auto;
-    display: block;
+    border-radius: 6px;
+    background: #191919;
+    margin-top: 19px;
+}
+
+
+.articleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 73px;
+    width: 100%;
+}
+
+.articleDiv p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.cardsDiv{
+
+    width: 100%;
+    height: auto;
+    padding: 0 22px 0 22px;
 }
