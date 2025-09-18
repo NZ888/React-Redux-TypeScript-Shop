@@ -31,6 +31,26 @@
     justify-content: center;
     height: 73px;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.articleDiv button{
+    border-radius: 6px;
+    width: 125px;
+    height: 38px;
+    background: #6c3eb8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 24px;
+}
+
+.articleDiv button:hover {
+    background: #5a32a0;
 }
 
 .articleDiv p {
@@ -41,7 +61,6 @@
 }
 
 .cardsDiv{
-
     width: 100%;
     height: auto;
     padding: 0 22px 0 22px;

@@ -58,6 +58,9 @@ const MainPageComponent: React.FC = () => {
                         </Masonry>
                     </ResponsiveMasonry>
                 </div>
+                <div className={styles.articleDiv}>
+                    <button>See more</button>
+                </div>
             </div>
         </div>
 

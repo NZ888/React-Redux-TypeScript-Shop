@@ -1,5 +1,4 @@
 import React from 'react';
-import exampleImage from "../../../assets/images/examples/Nike ZoomX 2023.png";
 import styles from './ItemCard.module.css'
 interface ItemCardProps {
     id: number | string;
@@ -13,8 +12,23 @@ interface ItemCardProps {
 
 const ItemCard: React.FC<ItemCardProps> = ({ id, image, title, description, price, oldPrice, purchased }) => {
   return (
-    <div className={styles.container}>
-
+    <div data-id={id} className={styles.container}>
+        <div className={styles.imgDiv}>
+            <img src={image} alt="" />
+        </div>
+        <div className={styles.titleDiv}>
+           <p>{title}</p>
+            <p>{description}</p>
+        </div>
+        <div className={styles.priceDiv}>
+            <div className={styles.pricesDiv}>
+                <p>{price}</p>
+                <p>{oldPrice}</p>
+            </div>
+            <div className={styles.purchasedDiv}>
+                <p>{purchased} people purchased</p>
+            </div>
+        </div>
     </div>
   );
 };
