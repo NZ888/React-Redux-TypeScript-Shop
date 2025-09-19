@@ -13,7 +13,8 @@ const MainPageComponent: React.FC = () => {
                 <CategoriesComponent/>
                 <PromoComponent/>
             </div>
-            <TrendingComponent/>
+            <TrendingComponent title="Trending" isItemComponent={true}/>
+            <TrendingComponent title="Worth seeing" isItemComponent={false}/>
         </div>
     );
 };
