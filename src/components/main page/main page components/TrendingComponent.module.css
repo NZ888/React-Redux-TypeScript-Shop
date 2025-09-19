@@ -1,0 +1,51 @@
+
+.trendingContainer {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #191919;
+    margin-top: 19px;
+}
+
+
+.articleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 73px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.articleDiv button{
+    border-radius: 6px;
+    width: 125px;
+    height: 38px;
+    background: #6c3eb8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 24px;
+}
+
+.articleDiv button:hover {
+    background: #5a32a0;
+}
+
+.articleDiv p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+.cardsDiv{
+    width: 100%;
+    height: auto;
+    padding: 0 22px 0 22px;
+}
