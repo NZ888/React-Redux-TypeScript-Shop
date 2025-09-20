@@ -5,6 +5,7 @@ import ItemCard from "../../cards/item card/ItemCard.tsx";
 import exampleImage from "../../../assets/images/examples/Nike ZoomX 2023.png";
 import WorthSeeingExampleImage from "../../../assets/images/examples/Sneakers.png"
 import WorthSeeingCard from "../../cards/worth seeing card/WorthSeeingCard.tsx";
+import StylizedBtn from "../../buttons/stylized btn/StylizedBtn.tsx";
 interface TrendingComponentProps{
     isItemComponent: boolean;
     title: string;
@@ -73,7 +74,9 @@ const TrendingComponent: React.FC<TrendingComponentProps> = ({ isItemComponent, 
           </ResponsiveMasonry>
         </div>
         <div className={styles.articleDiv}>
-          <button>See more</button>
+            {isItemComponent && (
+                <StylizedBtn title={"See more"}/>
+            )}
         </div>
       </div>
   );

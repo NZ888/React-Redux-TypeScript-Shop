@@ -1,7 +1,11 @@
 .container{
+    position: sticky;
+    z-index: 2;
     margin-top: 10px;
     display: flex;
     align-items: center;
+    top: 0;
+    background: #212123;
 }
 .logoContainer, .userContainer, .searchContainer, .cardContainer{
     width: 25%;

@@ -29,6 +29,13 @@ img, picture, video, canvas, svg {
   height: auto;
 }
 
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+}
 
 input, button, textarea, select {
   font: inherit;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./PromoComponent.module.css";
 import promoImage from "../../../assets/images/promo/image 1.png";
+import StylizedBtn from "../../buttons/stylized btn/StylizedBtn.tsx";
 
 interface PromoComponentProps {
   
@@ -17,7 +18,7 @@ const PromoComponent: React.FC<PromoComponentProps> = ({  }) => {
                       LENNON r2d2 <br />
                       with NVIDIA 5090 TI
                   </h3>
-                  <button>Shop Now</button>
+                  <StylizedBtn title={"See more"}/>
               </div>
               <div className={styles.promoImageDiv}>
                   <img src={promoImage} alt="promo" />
