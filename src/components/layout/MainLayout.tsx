@@ -3,11 +3,13 @@ import HeaderComponent from "../header/HeaderComponent.tsx";
 import {Outlet} from "react-router";
 import styles from "./MainLayout.module.css";
 import Footer from "../footer/Footer.tsx";
+import {useLocation} from 'react-router-dom';
 interface MainLayoutProps {
 
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({  }) => {
+  let location = useLocation();
   return (
     <>
         <div className={styles.layout}>
@@ -16,7 +18,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({  }) => {
                 <main>
                     <Outlet />
                 </main>
-                <Footer />
+                {location.pathname === "/" && (
+                    <Footer />
+                )}
             </div>
         </div>
     </>

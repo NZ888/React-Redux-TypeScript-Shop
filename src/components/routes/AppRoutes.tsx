@@ -15,7 +15,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({  }) => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<MainPageComponent />} />
           <Route path="/product/:id" element={<ProductPageComponent />} />
-          <Route path={"/category/:slug"} element={<CategoryComponent />}/>
+          <Route path={"/category/:id"} element={<CategoryComponent />}/>
           {/*<Route path="/cart" element={<Cart />} />*/}
         </Route>
         <Route path="*" element={<NotFoundComponent/>}/>
