@@ -28,3 +28,8 @@
     color: #576067;
     cursor: pointer;
 }
+
+.navLink {
+    text-decoration: none;
+    color: inherit;
+}

@@ -76,3 +76,8 @@
     font-size: 10px;
     color: #576067;
 }
+
+.navLink {
+    text-decoration: none;
+    color: inherit;
+}
