@@ -27,7 +27,7 @@ const CategoryComponent: React.FC = () => {
           {data && (
               <TrendingComponent
                   //@ts-ignore
-                  title={ data ? data[0].category.name : "loading"}
+                  title={ data ? data[0]?.category.name : "loading"}
                   isItemComponent={true}
                   items={data}
               />
