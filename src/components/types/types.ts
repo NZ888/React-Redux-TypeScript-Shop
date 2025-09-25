@@ -15,3 +15,13 @@ export type ProductType = {
     category?: CategoryType;
     images: string[];
 };
+
+
+export type CategoriesDataType = {
+    creationAt: string;
+    id: number;
+    image: string;
+    name: string;
+    slug: string;
+    updatedAt: string;
+};
