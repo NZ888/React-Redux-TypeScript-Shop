@@ -25,3 +25,8 @@ export type CategoriesDataType = {
     slug: string;
     updatedAt: string;
 };
+
+export type CartItem = {
+    id: number,
+    quantity: number,
+}

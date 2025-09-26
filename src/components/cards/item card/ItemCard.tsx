@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ItemCard.module.css'
 import { NavLink } from "react-router";
-import type {ProductType} from "../../types/types.ts";
+import type {ProductType} from "../../../types/types.ts";
 
 type ItemCardProps = Pick<ProductType, "id" | "title" | "description" | "price" | "images" | "slug">;
 

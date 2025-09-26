@@ -42,6 +42,7 @@
 }
 
 .anotherImages img{
+    margin-top: 16px;
     border-radius: 8px;
     width: 90px;
     height: 90px;

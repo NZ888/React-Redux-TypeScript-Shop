@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 import axios from "axios";
-import type {CategoryType, ProductType} from "../components/types/types.ts";
+import type {CategoryType, ProductType} from "../types/types.ts";
 
 
 const fetchCategoryIdBySlug = async (slug: string) => {

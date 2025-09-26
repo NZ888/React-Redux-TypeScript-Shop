@@ -1,6 +1,6 @@
 import axios, {type AxiosResponse} from 'axios';
 import {useQuery} from "@tanstack/react-query";
-import type {ProductType} from "../components/types/types.ts";
+import type {ProductType} from "../types/types.ts";
 
 const fetchProductsById = async (id: number) => {
     const response: AxiosResponse<ProductType> = await axios.get(`https://api.escuelajs.co/api/v1/products/${id}`)

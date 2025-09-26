@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../main page components/TrendingComponent.module.css";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import ItemCard from "../../cards/item card/ItemCard.tsx";
-import type {ProductType} from "../../types/types.ts";
+import type {ProductType} from "../../../types/types.ts";
 import StylizedBtn from "../../buttons/stylized btn/StylizedBtn.tsx";
 interface TrendingComponentProps{
     isItemComponent: boolean;
