@@ -5,7 +5,7 @@ import MainPageComponent from "../main page/MainPageComponent.tsx";
 import NotFoundComponent from "../404/NotFoundComponent.tsx";
 import ProductPageComponent from "../product page/ProductPageComponent.tsx";
 import CategoryComponent from "../category page/CategoryPageComponent.tsx";
-import CartComponent from "../cart/CartComponent.tsx";
+import CartComponent from "../cart page/CartComponent.tsx";
 interface AppRoutesProps {
   
 }

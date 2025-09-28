@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    border-radius: 8px;
+    width: 100%;
+    height: 71px;
+    background: #212123;
+    margin-top: 8px;
+}
+
+.infoDiv{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-left: 16px;
+
+}
+.infoDiv img{
+    width: 98px;
+    height: 47px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+}
+
+.infoDiv span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    margin-left: 15px;
+}
+.priceDiv{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceDiv span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+.buttonsDiv{
+    width: 15%;
+    margin-left: 95px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsDiv span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    color: #576067;
+}
+
+.totalPriceDiv{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.totalPriceDiv span{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #6c3eb8;
+}
+
+.cancelDiv{
+    height: 100%;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

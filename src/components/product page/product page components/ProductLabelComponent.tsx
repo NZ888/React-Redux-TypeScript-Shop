@@ -45,7 +45,7 @@ const ProductLabelComponent: React.FC<ProductType> = ({ id, images, title, price
                     )}
                 </div>
                 <div className={styles.buttonsDiv}>
-                    <StylizedBtn title={"Add to cart"} onClick={()=>dispatch(addToCart({id: id, quantity: 1}))}/>
+                    <StylizedBtn title={"Add to cart page"} onClick={()=>dispatch(addToCart({id: id, quantity: 1}))}/>
                 </div>
             </div>
 
