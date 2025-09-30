@@ -28,5 +28,5 @@ export type CategoriesDataType = {
 
 export type CartItem = {
     id: number,
-    quantity: number,
+    quantity?: number,
 }
