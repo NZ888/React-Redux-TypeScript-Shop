@@ -28,7 +28,18 @@ const cardSlice = createSlice({
             const { id, quantity } = action.payload;
             const item = state.items.find(item => item.id === id)
             if (item) {
+
                 item.quantity += quantity
+            }
+        },
+        reduceTheAmount: (state, action: PayloadAction<CartItem>) => {
+            const { id } = action.payload;
+            const item = state.items.find(item => item.id === id);
+            if (item && item.quantity > 0) {
+                item.quantity -= 1
+                if (item.quantity <= 0) {
+                    state.items = state.items.filter(i => i.id !== id);
+                }
             }
         },
         removeFromCart(state, action: PayloadAction<number>) {
@@ -37,8 +48,8 @@ const cardSlice = createSlice({
         clearCart(state) {
             state.items = []
         }
-    }
+    },
 })
 
-export const { addToCart, setQuantity, removeFromCart, clearCart } = cardSlice.actions;
+export const { addToCart, setQuantity, removeFromCart, clearCart, reduceTheAmount } = cardSlice.actions;
 export default cardSlice.reducer;

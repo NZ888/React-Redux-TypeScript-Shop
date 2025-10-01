@@ -3,33 +3,44 @@ import styles from './CartItem.module.css'
 import StylizedBtn from "../../buttons/stylized btn/StylizedBtn.tsx";
 import UncoloredBtn from "../../buttons/uncolored btn/UncoloredBtn.tsx";
 import type {ProductType} from "../../../types/types.ts"
+import {addToCart, reduceTheAmount, removeFromCart} from "../../../store/Redux/cart/slices/CardSlice.ts";
+import {useAppDispatch, useAppSelector} from "../../../hooks/useReduxHooks.ts";
+import {
+    makeSelectItemQuantity, makeSelectItemTotal,
+} from "../../../store/Redux/cart/selectors/CartSelectors.ts";
+import {useNavigate} from "react-router-dom";
 
 type CartItemProps = Pick<ProductType, "id" | "title" | "price" | "images"> & {
-    quantity?: number;
+    product: ProductType;
+    products: ProductType[];
 };
 
 
-const CartItem: React.FC<CartItemProps> = ({ id, title, images, price }) => {
 
+const CartItem: React.FC<CartItemProps> = ({ id, title, images, price, product, products }) => {
+    const dispatch = useAppDispatch()
+    const itemQuantity = useAppSelector(makeSelectItemQuantity(product.id));
+    const finalItemPrice = useAppSelector(makeSelectItemTotal(product.id, products));
+    const navigate = useNavigate()
     return (
         <div data-product-id={id} className={styles.container}>
             <div className={styles.infoDiv}>
                 <img src={images[0]} alt=""/>
-                <span>{title}</span>
+                <span style={{cursor: "pointer"}} onClick={()=>navigate(`/product/${id}`)}>{title}</span>
             </div>
             <div className={styles.priceDiv}>
                 <span>{price}$</span>
             </div>
             <div className={styles.buttonsDiv}>
-                <UncoloredBtn title={"-"}/>
-                <span>1</span>
-                <StylizedBtn title={"+"}/>
+                <UncoloredBtn title={"-"} onClick={()=>dispatch(reduceTheAmount({id: id, quantity: 1}))} />
+                <span>{itemQuantity}</span>
+                <StylizedBtn title={"+"} onClick={()=>dispatch(addToCart({id: id, quantity: 1}))}/>
             </div>
             <div className={styles.totalPriceDiv}>
-                <span>99$</span>
+                <span>{finalItemPrice}$</span>
             </div>
             <div className={styles.cancelDiv}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg style={{cursor: 'pointer'}} onClick={()=>dispatch(removeFromCart(id))} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_103_289)">
                     <path d="M5.65572 6.383C5.75272 6.4805 5.88022 6.529 6.00772 6.529C6.13522 6.529 6.26272 6.4805 6.35972 6.383C6.55422 6.1885 6.55422 5.873 6.35972 5.6785L2.37722 1.692C2.18272 1.4975 1.86772 1.4975 1.67322 1.692C1.47872 1.8865 1.47872 2.202 1.67322 2.3965L5.65572 6.383Z" fill="white" fill-opacity="0.5" />
                     <path d="M8.70342 8.024L14.3259 2.3965C14.5204 2.202 14.5204 1.8865 14.3259 1.692C14.1314 1.4975 13.8164 1.4115 13.6219 1.6065L7.64792 7.5H7.49992V7.6725L1.59992 13.6515C1.40542 13.846 1.44242 14.1615 1.63642 14.356C1.73342 14.4535 1.87942 14.502 2.00692 14.502C2.13442 14.502 2.27092 14.4535 2.36792 14.356L7.99492 8.729L13.6194 14.3565C13.7164 14.454 13.8454 14.5025 13.9724 14.5025C14.0994 14.5025 14.2279 14.454 14.3249 14.3565C14.5194 14.162 14.5199 13.8465 14.3254 13.652L8.70342 8.024Z" fill="white" fill-opacity="0.5" />
